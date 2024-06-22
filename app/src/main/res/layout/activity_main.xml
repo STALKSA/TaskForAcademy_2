@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:titleTextColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Первая новость -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Где находится центр Вселенной?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/universe_center"
+                android:contentDescription="Изображение центра Вселенной"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Вопрос о центре Вселенной увлекателен, но запутан. На первый взгляд мы можем подумать, что ее естественным центром является Большой взрыв, начальный момент ее расширения. Однако современное понимание космологии говорит нам, что это понятие сложнее, чем кажется. Чтобы понять Вселенную, мы должны сначала рассмотреть ее размеры и фундаментальные характеристики. Возраст Вселенной оценивается примерно в 13,77 миллиарда лет, но из-за скорости света наше видение ограничено расстоянием около 45 миллиардов световых лет. За пределами этого расстояния она расширяется настолько быстро, что свет, излучаемый этими областями, никогда не достигнет нас. В результате большая часть космоса остается для нас невидимой, как если бы мы пытались пройти по темному лесу с факелом, луч которого может осветить лишь определенное расстояние"
+                android:textSize="18sp"
+                android:paddingBottom="16dp"/>
+
+            <!-- Вторая новость -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Открытие нового рогатого динозавра, не похожего ни на одного другого"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dinosaur"
+                android:contentDescription="Изображение рогатого динозавра"
+                android:paddingBottom="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="До недавнего времени ученые считали, что из-за конкуренции за ресурсы в любой момент времени могли сосуществовать лишь несколько видов рогатых динозавров. Однако L. rangiformis - четвертый цератопсид и пятый рогатый динозавр, обнаруженный в этот период, что говорит о большем разнообразии внутри этой группы, чем считалось ранее. Такое относительное сосуществование указывает на возможную гармонию между различными видами из формации Judith River. Череп локицератопса также радикально отличается от черепов других цератопсид, с которыми он жил. По мнению авторов исследования, посвященного этому животному, высокий уровень биоразнообразия цератопсисов мог способствовать выраженному половому отбору. Помимо защиты от хищников, большие рога L. rangiformis, вероятно, играли решающую роль в привлечении потенциальных партнеров, подобно красочным перьям современных птиц."
+                android:textSize="18sp"
+                android:paddingBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
